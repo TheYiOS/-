@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1AEE0C7D1CD903F70073F592 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEE0C7C1CD903F70073F592 /* main.m */; };
+		1AEE0C881CD905150073F592 /* ZYPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEE0C871CD905150073F592 /* ZYPerson.m */; };
+		1AEE0C8B1CD905360073F592 /* ZYChildren.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEE0C8A1CD905360073F592 /* ZYChildren.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,10 @@
 /* Begin PBXFileReference section */
 		1AEE0C791CD903F70073F592 /* 消息转发机制 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "消息转发机制"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AEE0C7C1CD903F70073F592 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1AEE0C861CD905150073F592 /* ZYPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYPerson.h; sourceTree = "<group>"; };
+		1AEE0C871CD905150073F592 /* ZYPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYPerson.m; sourceTree = "<group>"; };
+		1AEE0C891CD905360073F592 /* ZYChildren.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYChildren.h; sourceTree = "<group>"; };
+		1AEE0C8A1CD905360073F592 /* ZYChildren.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYChildren.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,10 @@
 			isa = PBXGroup;
 			children = (
 				1AEE0C7C1CD903F70073F592 /* main.m */,
+				1AEE0C861CD905150073F592 /* ZYPerson.h */,
+				1AEE0C871CD905150073F592 /* ZYPerson.m */,
+				1AEE0C891CD905360073F592 /* ZYChildren.h */,
+				1AEE0C8A1CD905360073F592 /* ZYChildren.m */,
 			);
 			path = "消息转发机制";
 			sourceTree = "<group>";
@@ -118,7 +128,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AEE0C8B1CD905360073F592 /* ZYChildren.m in Sources */,
 				1AEE0C7D1CD903F70073F592 /* main.m in Sources */,
+				1AEE0C881CD905150073F592 /* ZYPerson.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,14 +219,21 @@
 		1AEE0C811CD903F70073F592 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "消息转发机制/消息转发机制-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		1AEE0C821CD903F70073F592 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "消息转发机制/消息转发机制-Bridging-Header.h";
 			};
 			name = Release;
 		};

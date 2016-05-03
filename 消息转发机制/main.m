@@ -7,11 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <objc/runtime.h>
+#import "ZYPerson.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+        ZYPerson *p = [ZYPerson new];
+        
+        [p performSelector:@selector(testMethod)];
     }
     return 0;
 }
